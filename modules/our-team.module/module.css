@@ -114,19 +114,10 @@ img {
   background-color: white;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  -webkit-transition: all .2s ease-out;
-  transition: all .2s ease-out;
 }
 
 .team-member__contact:not(:last-child) {
   margin-right: 1rem;
-}
-
-.team-member__contact:hover {
-  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  -webkit-transition: all .2s ease-out;
-  transition: all .2s ease-out;
 }
 
 .team-member__contact span {
@@ -150,4 +141,12 @@ img {
 
 .team-member__contact span svg path {
   fill: #CC2936;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+.team-member__contact:hover svg path {
+  fill: black;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
 }

@@ -56,13 +56,8 @@
             margin-right: 1rem;
         }
 
-        &:hover {
-            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-            @include transition;
-        }
 
         @include material-shadow;
-        @include transition;
         
         span {
             width: 100%;
@@ -76,7 +71,17 @@
     
                 path {
                     fill: $accent-color;
+                    @include transition;
                 }
+            }
+        }
+
+        &:hover {
+            svg {
+                path {
+                    fill: black;
+                    @include transition;
+                } 
             }
         }
     }
