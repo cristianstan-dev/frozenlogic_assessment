@@ -1,10 +1,83 @@
 .team-member {
+    padding-bottom: 1rem;
+
+    &__image {
+        position: relative;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(255,255,255,.5);
+            opacity: 0;
+            @include transition;
+            
+        }
+        
+        &:hover {
+            &::after {
+                width: 100%;
+                height: 100%;
+                opacity: 1;
+                @include transition;
+            }
+            
+        }
+    }
+
+    &__details,
+    &__contacts {
+        padding: 0 1rem;
+    }
+
     &__name {
         font-weight: bold;
-        margin: $global-margin 0 $small-margin;
+        margin: $global-margin 0 0;
     }
     &__position {
         color: $accent-color;
-        margin: $small-margin 0;
+        margin: $small-margin 0 $global-margin;
+        font-weight: light;
+    }
+
+
+    &__contacts {
+        display: flex;
+    }
+
+    &__contact {
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: white;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        &:hover {
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            @include transition;
+        }
+
+        @include material-shadow;
+        @include transition;
+        
+        span {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+                width: 1.25rem;
+                height: 1.25rem;
+    
+                path {
+                    fill: $accent-color;
+                }
+            }
+        }
     }
 }

@@ -12,14 +12,29 @@
                     <div class="team-member__name">{{ member.member_name }} </div>
                     <div class="team-member__position">{{ member.member_position }}</div>
                 </div>
-                <div class="team-member__social">
-                    {% for social in module.social_networks %}
-                    <a href="{{ social.network_url }}"
-                       class="social-network social-network--{{ social.network.name }}">
-                        <div class="social-network__icon">{% icon social.network_icon %}</div>
-                        <div class="social-network__name">{{ social.network_name }}</div>
-                    </a>
-                    {% endfor %}
+                <div class="team-member__contacts">
+                    {% if member.contact_info.email_address %}
+                        <a class="team-member__contact team-member__contact--email"
+                           href="mailto:{{ member.contact_info.email_addresse }}">
+                            {% icon name='envelope'  style='solid' %}
+                        </a>
+                    {% endif %}
+                
+                    {% if member.contact_info.phone_number %}
+                        <a class="team-member__contact team-member__contact--phone" 
+                        href="tel:{{ member.contact_info.phone_number }}">
+                            {% icon name='phone'  style='solid' %}
+                        </a>
+                    {% endif %}
+
+                    {% if member.contact_info.linkedin %}
+                        <a class="team-member__contact team-member__contact--linkedin" 
+                           href="{{ member.contact_info.linkedin.href }}" 
+                           target="{{ member.contact_info.linkedin.open_in_new_tab ? '_blank' : '_self' }}" 
+                           rel="{{ member.contact_info.linkedin.no_follow ? 'no_follow' : 'follow' }}">
+                            {% icon name='linkedin'  style='solid' %}
+                        </a>
+                    {% endif %}
                 </div>
             </div>
         {% endfor %} 
