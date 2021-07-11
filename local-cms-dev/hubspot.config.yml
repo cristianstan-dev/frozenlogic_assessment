@@ -1,0 +1,12 @@
+defaultPortal: cristianstan
+portals:
+  - name: cristianstan
+    portalId: 20401901
+    authType: personalaccesskey
+    auth:
+      tokenInfo:
+        accessToken: >-
+          CIfB-rGpLxIJAA0AAAAA4A0DGO2d3Qkg992TDCju6QwyGQCPW2lCUyqU80hIJQQgZqLMEy_Ex2Pz30A6KAAABEEAAAB4AAAAAAAAAAAAAAAAAAAABAAAwAcA_v8xPAAABgAAAGBCGQCPW2lC1dZge8fmLnYPQ-S3iM04NUq8IUZKA25hMQ
+        expiresAt: '2021-07-11T15:45:24.622Z'
+    personalAccessKey: >-
+      CiRlYmEyZTE5NC02YjEzLTQ2M2EtYjc4NC03ZmY5YjcyYzE3MDcQ7Z3dCRj33ZMMKhkABeaRgo1CqfiV7ZSE2U7isrr8FT-lYY1qSgNuYTE
