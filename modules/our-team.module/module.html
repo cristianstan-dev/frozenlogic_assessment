@@ -1,4 +1,27 @@
 <section class="our-team">
-    <h2 class="our-team__heading">{{ our-team.section_title }}</h2>
-    <div class="our-team__details">{{ our-team.section_details }}</div>
+    <h2 class="our-team__heading">{{ module.section_heading.section_title }}</h2>
+    <div class="our-team__details">{{ module.section_heading.section_details }}</div>
+
+    <div class="team-members">
+        {% for member in module.team_members %}
+        <div class="team-member">
+                <div class="team-member__image">
+                    <img src="{{ member.member_image.src }}" alt="{{ member.member_image.alt }}" loading="{{ member.member_image.loading }}">
+                </div>
+                <div class="member__details">
+                    <div class="member__name">{{ member.member_name }} </div>
+                    <div class="member__name">{{ member.member_position }}</div>
+                </div>
+                <div class="member__social">
+                    {% for social in module.social_networks %}
+                    <a href="{{ social.network_url }}"
+                       class="social-network social-network--{{ social.network.name }}">
+                        <div class="social-network__icon">{% icon social.network_icon %}</div>
+                        <div class="social-network__name">{{ social.network_name }}</div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %} 
+    </div>
 </section>
