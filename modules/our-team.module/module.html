@@ -8,11 +8,11 @@
                 <div class="team-member__image">
                     <img src="{{ member.member_image.src }}" alt="{{ member.member_image.alt }}" loading="{{ member.member_image.loading }}">
                 </div>
-                <div class="member__details">
-                    <div class="member__name">{{ member.member_name }} </div>
-                    <div class="member__name">{{ member.member_position }}</div>
+                <div class="team-member__details">
+                    <div class="team-member__name">{{ member.member_name }} </div>
+                    <div class="team-member__position">{{ member.member_position }}</div>
                 </div>
-                <div class="member__social">
+                <div class="team-member__social">
                     {% for social in module.social_networks %}
                     <a href="{{ social.network_url }}"
                        class="social-network social-network--{{ social.network.name }}">

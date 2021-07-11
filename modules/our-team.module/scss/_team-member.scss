@@ -1,0 +1,10 @@
+.team-member {
+    &__name {
+        font-weight: bold;
+        margin: $global-margin 0 $small-margin;
+    }
+    &__position {
+        color: $accent-color;
+        margin: $small-margin 0;
+    }
+}

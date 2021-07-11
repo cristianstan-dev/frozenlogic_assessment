@@ -1,0 +1,22 @@
+.our-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__heading {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    &__details {
+        color: lightgray;
+    }
+
+    .team-members {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem;
+        margin-top: 2rem;
+    }
+}
